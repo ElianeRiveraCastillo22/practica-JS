@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jugando con dom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="row">
+      <article class="content card">
+        <h5>frutilla🍓</h5>
+        <button data-fruta="frutilla">Agregar</button>
+      </article>
+      <article class="content card">
+        <h5>platano🍌</h5>
+        <button data-fruta="platano">Agregar</button>
+      </article>
+      <article class="content card">
+        <h5>manzana 🍏</h5>
+        <button data-fruta="manzana">Agregar </button>
+      </article>
+    </div>
+  </main>
+  <section class="containerClick">
+    <ul class="pintarCarrito" id="carrito">
+
+    </ul>
+  </section>
+  <template id="template">
+    <li class="list">
+      <span class="lead">frutilla🍓</span>
+      <span class="cuantify">12</span>
+    </li>
+  </template>
+
+    <script src="app.js" ></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "practica-js-bluuweb",
+  "version": "1.0.0",
+  "description": "practica js",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm jest",
+    "start":"verse"
+  },
+  "keywords": [
+    "html",
+    "js",
+    "css"
+  ],
+  "author": "eliane",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^13.0.2",
+    "verse": "^1.0.0-alpha-05"
+  }
+}
