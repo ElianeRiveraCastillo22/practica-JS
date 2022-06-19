@@ -3,7 +3,8 @@ const template=document.getElementById("template")
 const fragment=document.createDocumentFragment();
 const btnesBotones= document.querySelectorAll(".content button")
 
-const carritoObjeto={};
+const carritoObjeto={ };
+
 const agregarAlCarrito=(e)=>{
     const producto={
         titulo:e.target.dataset.fruta,
@@ -14,35 +15,43 @@ const agregarAlCarrito=(e)=>{
         producto.cantidad=carritoObjeto[producto.id].cantidad + 1
     }
     carritoObjeto[producto.id]=producto;
-    console.log(carritoObjeto)
     pintarCarrito(producto)
 };
 
 const pintarCarrito=(producto)=>{
-
     carrito.textContent="";
     console.log("pintar carrito", producto)
-
+  console.log(typeof Object.values(carritoObjeto))
+  console.log( Object.values(carritoObjeto))
     Object.values(carritoObjeto).forEach((item)=>{
-
+        console.log(item)
         const clone = template.content.firstElementChild.cloneNode(true);
         clone.querySelector(".lead").textContent = item.titulo;
         clone.querySelector(".cuantify").textContent=item.cantidad;
         fragment.appendChild(clone)
-
     })
-
     carrito.appendChild(fragment)
-
 }
 
-btnesBotones.forEach((btn) => btn.addEventListener("click",agregarAlCarrito));
+btnesBotones.forEach((btn) => btn.addEventListener("click",agregarAlCarrito)); 
 
-/* …or create a new repository on the command line
-echo "# carrito-de-compras-" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/ElianeRiveraCastillo22/carrito-de-compras-.git
-git push -u origin main */
+
+
+/* let fruta=['🍏','🍌','🍓','🍈'];
+let users=[
+    {uid:1,name:"John", age:34},
+    {uid:2,name:"Amy", age:20},
+    {uid:3,name:"CamperCat", age:10},
+]
+
+
+let numeros=[1,2,3,4,5,6,7,8,9,10]
+ let numeroPorDos=numeros.map(num=>num*2)
+console.log(numeroPorDos)
+let mayoresDeTrenta=users.filter((x)=>{
+ return x.age>19
+})
+console.log(mayoresDeTrenta) */
+
+
+
